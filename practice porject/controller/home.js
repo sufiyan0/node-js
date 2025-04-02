@@ -1,4 +1,4 @@
-const product = require('../models/product')
+// const product = require('../models/product')
 const Product = require('../models/product')
 
 
@@ -34,7 +34,7 @@ exports.getProducts = (req, res,next) => {
     Product.findAll()
         .then((products) => {
             res.render('products', { products: products });
-            console.log(products)
+            // console.log(products)
         })
         .catch((err) => {
             console.log(err);

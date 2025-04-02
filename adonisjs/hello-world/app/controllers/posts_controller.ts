@@ -8,7 +8,7 @@ export default class PostsController {
   }
 
   public async store(ctx: HttpContext) {
-    const data:any = ctx.request.only(['title', 'content']);
+    const data:any = ctx.request.only(['title', 'content', 'image']);
     const post = await Post.create(data);
     return ctx.response.json(post);
   }

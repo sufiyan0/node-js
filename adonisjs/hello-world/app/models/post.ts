@@ -11,6 +11,9 @@ export default class Post extends BaseModel {
   @column()
   public content?: string
 
+  @column()
+  public image?: string
+
   @column.dateTime({ autoCreate: true })
   declare createdAt: DateTime
 
